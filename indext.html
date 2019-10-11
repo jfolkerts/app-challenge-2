@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Name Length Calculator</title>
+
+    <meta name="description" content="App Challenge 2">
+    <meta name="author" content="Justin Folkerts">
+
+    <!-- get current Bootstrap Material Design styles from https://mdbootstrap.com/md-bootstrap-cdn/ -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+
+    <!-- required for sticky footer -->
+    <style>
+        body,
+        .sticky-footer-wrapper {
+            min-height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column sticky-footer-wrapper">
+    <!-- Bootstrap container or container-fluid (whole width) -->
+    <!-- https://getbootstrap.com/docs/4.0/layout/overview/ -->
+    <!-- margin top 5 ($spacer * 3) -->
+    <main class="container mt-5 flex-fill">
+
+        <!--Container has rows - first row -->
+        <div class="row">
+
+            <!--Rows have columns - column 1 (7/12) -->
+            <div class="col-md-7 mb-4">
+
+                <article id="nameLength" class="col-md-4 ">
+                    <h2>Name Length Calculator</h2>
+                    <hr>
+
+                    <fieldset class="mt-4">
+                        <label for="name">Enter a name:</label>
+                        <input id="name" type="string" minlength="1" maxlength="100" value="Justin">
+                    </fieldset>
+                    <h3 class="mt-2">{{result}}</h3>
+            </div>
+            <!--end column 1-->
+
+            <!--column 2 (5/12) -->
+            <div class="col-md-5 mb-4">
+                <h2>Calculate number of letters in name: </h2>
+                <hr>
+                <button id="numletters" class="btn btn-primary">Calculate</button>
+                <hr>
+                <p id="result"></p>
+
+            </div>
+            <!-- end column 2-->
+
+        </div>
+        <!-- end row 1 -->
+
+    </main>
+
+    <footer>&copy; Justin Folkerts</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+    <script src="components/nameLength.js"></script>
+
+</body>
+
+</html>
